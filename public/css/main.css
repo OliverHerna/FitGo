@@ -1,0 +1,88 @@
+.hide{
+    display:none;
+}
+
+.login-error {
+    color:#ff4c29;
+    font-size: .8em;
+}
+
+/* Required fields */
+.form-group label span, .form-check-label span {
+    color:#ff4c29;
+}
+
+/* Catalogs inputs */
+.upper-input {
+    text-transform: uppercase;
+}
+.capitalize-input {
+    text-transform: capitalize;
+}
+.ck-editor__editable_inline {
+    min-height: 200px;
+}
+
+/* Invoices Datatables */
+td.details-control {
+    background: url('../vendor/datatables/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../vendor/datatables/details_close.png') no-repeat center center;
+}
+#message_loading {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    background-color: gray;
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    opacity: 0.75;
+    display: none;
+}
+#message_loading h3 {
+    position: fixed;
+    margin-left: 35%;
+    top: 40%;
+    color: white;
+}
+
+/* Placeholder text transform */
+::-webkit-input-placeholder { /* WebKit browsers */
+    text-transform: none;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-transform: none;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-transform: none;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    text-transform: none;
+}
+::placeholder { /* Recent browsers */
+    text-transform: none;
+}
+
+.firstTruncate {
+    max-width:150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar .img {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar.toggled .img {
+        width: 80px;
+    }
+}
