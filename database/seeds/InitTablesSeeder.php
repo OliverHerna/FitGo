@@ -242,7 +242,7 @@ class InitTablesSeeder extends Seeder
 
         DB::table('roles')->insert([
             [
-                'name' => 'Agente',
+                'name' => 'Instructor',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

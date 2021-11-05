@@ -21,63 +21,30 @@
             @can('roles.index')
                 <a class="collapse-item" href="{{ route('roles.index') }}">Roles</a>
             @endcan
-            @can('users.log')
-                <a class="collapse-item" href="{{ route('usuarios.log') }}">Bitácora</a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Pagos</span>
+        </a>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            @can('users.index')
+                <a class="collapse-item" href="{{ route('usuarios.index') }}">Índice</a>
+            @endcan
+            @can('roles.index')
+                <a class="collapse-item" href="{{ route('roles.index') }}">Asignar Pagos</a>
             @endcan
         </div>
     </li>
-    @endcan
-    @can('client_panel')
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('clients.index') }}" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            <i class="fa fa-user-plus"></i>
-            <span>Clientes</span>
-        </a>
-    </li>
-    @endcan
-    @can('paquete_panel')
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('paquetes.index') }}" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        <a class="nav-link" href="{{ route('scheadule.calendar') }}" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             <i class="fa fa-shopping-bag"></i>
-            <span>Paquetes</span>
+            <span>Actividades</span>
         </a>
     </li>
     @endcan
-    @can('benefit_panel')
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('benefits.index') }}" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <i class="fa fa-plus    "></i>
-            <span>Beneficios</span>
-        </a>
-    </li>
-    @endcan
-    @can('order_panel')
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('orders.index') }}" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <i class="fa fa-paperclip"></i>
-            <span>Ordenes</span>
-        </a>
-    </li>
-    @endcan
-    @can('report_panel')
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('reports.index') }}" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <i class="fa fa-table"></i>
-            <span>Reportes</span>
-        </a>
-    </li>
-    @endcan
-    @if(Auth::user()->role->id === 3)
-    <li class="nav-item">
-        <a class="nav-link" target="blank" href="https://global-systems.mx/finalizar-compra/" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-            <i class="fas fa-store-alt"></i>
-            <span>Comprar paquete</span>
-            <i class="fas fa-external-link-alt"></i>
-
-        </a>
-        
-    </li>
-    @endif
     <hr class="sidebar-divider d-none d-md-block">
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>

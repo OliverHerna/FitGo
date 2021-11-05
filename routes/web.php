@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PaqueteUserController;
+use App\Http\Controllers\Scheadule;
 use App\Order;
 use App\PaqueteUser;
 use App\User;
@@ -54,6 +55,9 @@ Route::prefix('panel_de_control')->group(function () {
     Route::resource('clients', 'ClientController')->parameters([
         'clients' => 'client'
     ]);
+
+    //Scheadule 
+    Route::get('scheadule/calendar', 'Scheadule@calendar')->name('scheadule.calendar');
 
     Route::get('/{user}/{paquete}', 'PaqueteUserController@store')->name('storePaqueteUser');
     Route::post('packageClient/store', 'PaqueteUserController@storePackageClient')->name('packageClient');
